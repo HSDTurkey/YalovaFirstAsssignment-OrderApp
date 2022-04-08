@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_text_title">@dimen/font_huge</dimen>
+    <dimen name="size_button_title">@dimen/font_large</dimen>
+
+    <!--    SPACINGS-->
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_small">16dp</dimen>
+
+    <!-- FONT SIZES-->
+    <dimen name="font_huge">24sp</dimen>
+    <dimen name="font_large">20sp</dimen>
+    <dimen name="font_normal">16sp</dimen>
+</resources>
