@@ -13,9 +13,9 @@
         android:layout_marginTop="@dimen/spacing_normal"
         android:gravity="center"
         android:text="@string/signup"
-        android:textColor="@android:color/black"
+        android:textColor="?colorPrimary"
         android:textSize="@dimen/size_text_title"
-        android:textStyle="bold" />
+        android:textStyle="bold|italic" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_name"
@@ -81,6 +81,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/chk_kvkk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spacing_normal"
