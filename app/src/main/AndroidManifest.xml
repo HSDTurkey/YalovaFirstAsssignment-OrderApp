@@ -9,10 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.YalovaBSM4042022FirstAssignment">
-        <activity
-            android:name=".OrderActivity"
-            android:exported="false" />
-        <activity
+
+    <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

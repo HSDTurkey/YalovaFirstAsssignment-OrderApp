@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/spacing_normal"
-    tools:context=".OrderActivity">
+    tools:context=".ui.OrderFragment">
 
     <!-- Greeting and User Info -->
     <androidx.appcompat.widget.LinearLayoutCompat
