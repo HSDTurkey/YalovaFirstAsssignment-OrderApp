@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.hdsturkey.yalovabsm404.firstassignment.databinding.FragmentSignupBinding
+import com.hdsturkey.yalovabsm404.firstassignment.util.hideKeyboard
 import com.hdsturkey.yalovabsm404.firstassignment.util.isValidEmail
+import com.hdsturkey.yalovabsm404.firstassignment.util.showKeyboard
 import com.hdsturkey.yalovabsm404.firstassignment.util.toast
 
 
@@ -35,35 +37,41 @@ class SignupFragment : Fragment() {
 
         if (mBinding.etName.text.isNullOrBlank()) {
             toast("Lütfen adınızı giriniz")
+            mBinding.etName.showKeyboard()
             return false
         }
 
         if (mBinding.etSurname.text.isNullOrBlank()) {
             toast("Lütfen soyadınızı giriniz")
+            mBinding.etSurname.showKeyboard()
             return false
         }
 
         //Email null ve boş olmamalı: 2p
         if (mBinding.etEmail.text.isNullOrBlank()) {
             toast("Lütfen mail adresi giriniz.")
+            mBinding.etEmail.showKeyboard()
             return false
         }
 
         //Girilen email adresi doğru formatta olmalı: 2p
         if (mBinding.etEmail.text.toString().isValidEmail().not()) {
             toast("Lütfen doğru formatta bir mail adresi giriniz.")
+            mBinding.etEmail.showKeyboard()
             return false
         }
 
         //Şifre null ve boş olmamalı: 2p
         if (mBinding.etPassword.text.isNullOrBlank()) {
             toast("Lütfen şifre giriniz.")
+            mBinding.etPassword.showKeyboard()
             return false
         }
 
         //Şifre 8 karakterden az olmamalı: 2p
         if (mBinding.etPassword.text.toString().length < 8) {
             toast("Şifreniz 8 karakterden küçük olamaz.")
+            mBinding.etPassword.showKeyboard()
             return false
         }
 
@@ -72,8 +80,11 @@ class SignupFragment : Fragment() {
                 .not()
         ) {    //contains yerine EmailPattern ile de yapılabilir.
             toast("Mail adresiniz yalova.edu.tr içermelidir.")
+            mBinding.etEmail.showKeyboard()
             return false
         }
+
+        hideKeyboard()
 
         //KVKK ile ilgili checkbox işaretli olmalı: 2p
         if (mBinding.chkKvkk.isChecked.not()) {
