@@ -21,9 +21,9 @@
             app:srcCompat="@drawable/user" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_marginStart="@dimen/spacing_small"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_small"
             android:orientation="vertical">
 
             <com.google.android.material.textview.MaterialTextView
@@ -102,22 +102,26 @@
                 android:orientation="vertical">
 
                 <RadioGroup
+                    android:id="@+id/first_order_options"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/spacing_small"
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/first_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/small" />
 
                     <RadioButton
+                        android:id="@+id/first_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/medium" />
 
                     <RadioButton
+                        android:id="@+id/first_big"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/big" />
@@ -173,22 +177,26 @@
                 android:orientation="vertical">
 
                 <RadioGroup
+                    android:id="@+id/second_order_options"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/spacing_small"
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/second_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/small" />
 
                     <RadioButton
+                        android:id="@+id/second_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/medium" />
 
                     <RadioButton
+                        android:id="@+id/second_big"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/big" />
@@ -216,11 +224,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spacing_normal"
         android:gravity="start"
-        android:text="@string/fake_cost"
         android:textColor="?colorOnSurface"
         android:textSize="@dimen/size_button_title"
         android:textStyle="bold"
         android:visibility="gone"
+        tools:text="@string/fake_cost"
         tools:visibility="visible" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
