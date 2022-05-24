@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.hdsturkey.yalovabsm404.firstassignment.databinding.FragmentSignupBinding
 import com.hdsturkey.yalovabsm404.firstassignment.util.hideKeyboard
 import com.hdsturkey.yalovabsm404.firstassignment.util.isValidEmail
@@ -96,8 +97,12 @@ class SignupFragment : Fragment() {
     }
 
 
+    //Kullanıcı Adı ve Soyadının “Sipariş” sayfasına gönderilmesi: 2p
+    //“Sipariş” sayfasına geçiş: 2p
     private fun goNextScreen() {
-        //todo
+        val userNameSurname = mBinding.etName.text.toString() + " " + mBinding.etSurname.text.toString()
+        val action = SignupFragmentDirections.actionSignupFragmentToOrderFragment(userNameSurname)
+        findNavController().navigate(action)
     }
 
     override fun onCreateView(
