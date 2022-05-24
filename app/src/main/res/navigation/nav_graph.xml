@@ -23,5 +23,9 @@
             android:name="nameSurname"
             app:argType="string"
             app:nullable="false" />
+        <argument
+            android:name="email"
+            app:argType="string"
+            app:nullable="false" />
     </fragment>
 </navigation>

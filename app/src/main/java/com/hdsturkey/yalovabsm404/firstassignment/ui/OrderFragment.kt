@@ -22,13 +22,19 @@ class OrderFragment : Fragment() {
 
     private fun initializeViews() {
         setGreetingMessage()
+        setEmailAddress()
     }
 
+    //“Kayıt Ol” ekranından gönderilen kullanıcı adı ve soyadının büyük harflerle gösterilmesi ve “Hoşgeldiniz” yazısı ile birlikte gösterilmesi: 5p
     private fun setGreetingMessage() {
         val incomeUserNameSurname = args.nameSurname
         val upperCasedUserNameSurname = incomeUserNameSurname.uppercase()
         val greetingMessage = "Hoşgeldin $upperCasedUserNameSurname"
         mBinding.tvWelcome.text = greetingMessage
+    }
+
+    private fun setEmailAddress() {
+        mBinding.tvEmail.text = args.email
     }
 
     override fun onCreateView(

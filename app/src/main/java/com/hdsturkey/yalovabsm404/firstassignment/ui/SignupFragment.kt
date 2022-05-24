@@ -101,7 +101,8 @@ class SignupFragment : Fragment() {
     //“Sipariş” sayfasına geçiş: 2p
     private fun goNextScreen() {
         val userNameSurname = mBinding.etName.text.toString() + " " + mBinding.etSurname.text.toString()
-        val action = SignupFragmentDirections.actionSignupFragmentToOrderFragment(userNameSurname)
+        val email = mBinding.etEmail.text.toString()
+        val action = SignupFragmentDirections.actionSignupFragmentToOrderFragment(userNameSurname, email)
         findNavController().navigate(action)
     }
 
