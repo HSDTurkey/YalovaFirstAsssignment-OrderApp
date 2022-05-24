@@ -29,10 +29,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="start"
-                android:text="@string/welcome"
-                android:textColor="@android:color/black"
+                android:textColor="?colorOnSurface"
                 android:textSize="@dimen/size_text_title"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:text="@string/welcome" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_email"
@@ -40,9 +40,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_normal"
                 android:gravity="start"
-                android:text="@string/fakeemail"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/size_text_description" />
+                android:textColor="?colorOnSurface"
+                android:textSize="@dimen/size_text_description"
+                tools:text="@string/fakeemail" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="start"
                 android:text="@string/extravangza"
-                android:textColor="@android:color/black"
+                android:textColor="?colorOnSurface"
                 android:textSize="@dimen/size_text_title"
                 android:textStyle="bold" />
 
@@ -91,7 +91,7 @@
                 android:layout_marginTop="@dimen/spacing_small"
                 android:gravity="start"
                 android:text="@string/extravangza_ingredients"
-                android:textColor="@android:color/black"
+                android:textColor="?colorOnSurface"
                 android:textSize="@dimen/size_text_description_small" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
@@ -151,7 +151,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="start"
                 android:text="@string/hot_amigo"
-                android:textColor="@android:color/black"
+                android:textColor="?colorOnSurface"
                 android:textSize="@dimen/size_text_title"
                 android:textStyle="bold" />
 
@@ -162,7 +162,7 @@
                 android:layout_marginTop="@dimen/spacing_small"
                 android:gravity="start"
                 android:text="@string/hotamigo_ingredients"
-                android:textColor="@android:color/black"
+                android:textColor="?colorOnSurface"
                 android:textSize="@dimen/size_text_description_small" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
@@ -215,8 +215,10 @@
         android:layout_marginTop="@dimen/spacing_normal"
         android:gravity="start"
         android:text="@string/fake_cost"
-        android:textColor="@android:color/black"
+        android:textColor="?colorOnSurface"
         android:textSize="@dimen/size_button_title"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
