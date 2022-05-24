@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Uygulama geliştirirken Fragment ve Navigation Component kullanılması (Bonus %10) -->
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -19,6 +20,7 @@
         android:name="com.hdsturkey.yalovabsm404.firstassignment.ui.OrderFragment"
         android:label="fragment_order"
         tools:layout="@layout/fragment_order">
+        <!-- Fragment ve Navigation Component yapısını kullanırken veri gönderiminde “Safe Args” kullanılması (Bonus %3)-->
         <argument
             android:name="nameSurname"
             app:argType="string"

@@ -8,5 +8,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //VCS (Version Control System) kullanımı (Bonus %7)
+        //1. Proje geliştirme sırasında en az 3 adet commit atılması (Örneğin: Initial Commit, KayıtOl_Sayfa Commit, Sipariş_Sayfa Commit): 7p
     }
 }

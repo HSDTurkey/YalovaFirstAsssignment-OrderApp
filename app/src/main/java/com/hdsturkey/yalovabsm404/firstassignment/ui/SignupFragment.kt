@@ -102,6 +102,7 @@ class SignupFragment : Fragment() {
     private fun goNextScreen() {
         val userNameSurname = mBinding.etName.text.toString() + " " + mBinding.etSurname.text.toString()
         val email = mBinding.etEmail.text.toString()
+        //Fragment ve Navigation Component yapısını kullanırken veri gönderiminde “Safe Args” kullanılması (Bonus %3)
         val action = SignupFragmentDirections.actionSignupFragmentToOrderFragment(userNameSurname, email)
         findNavController().navigate(action)
     }
