@@ -6,8 +6,10 @@ import android.util.Patterns
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 
 fun Context.toast(message: String, length: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(this, message, length).show()
@@ -29,4 +31,12 @@ fun EditText.showKeyboard() {
 fun Fragment.hideKeyboard() {
     requireActivity().window
         .setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+}
+
+fun ImageView.loadImage(url: String) {
+    Glide
+        .with(this.context)
+        .load(url)
+        .centerCrop()
+        .into(this)
 }
